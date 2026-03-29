@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+:root {
+  --background: #000000;
+  --foreground: #f4efe6;
+  --surface: #050505;
+  --muted: rgba(244, 239, 230, 0.46);
+  --line: rgba(255, 255, 255, 0.18);
+  --accent: #ff5a1f;
+  --deep-accent: #7c1600;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --font-sans: "Space Mono", ui-monospace, monospace;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+  background: var(--background);
+  color: var(--foreground);
+  overflow: hidden;
+  cursor: none;
+  font-family: var(--font-copy), "Space Mono", monospace;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: none;
+}
+
+canvas {
+  display: block;
+}
+
+::selection {
+  background: rgba(255, 90, 31, 0.35);
+  color: var(--foreground);
+}
+
+@keyframes ring-room-cta-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
